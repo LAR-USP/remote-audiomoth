@@ -24,3 +24,7 @@ The receiver is the computer that will get the audio data
 source venv/bin/activate
 python3 receiver.py
 ```
+
+### AudiomMoth USB mode configs (firmware and host configs)
+
+https://www.openacousticdevices.info/usb-microphone
