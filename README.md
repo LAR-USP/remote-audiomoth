@@ -1,4 +1,4 @@
-# AudioMoth PySocket
+# Remote Microphone through Socket Connection
 
 ### Installation
 ```
