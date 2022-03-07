@@ -2,10 +2,10 @@
 
 ### Installation
 ```
-sudo apt-get install portaudio19-dev python-pyaudio
+sudo apt-get install portaudio19-dev python3-pyaudio
 virtualenv venv
 source venv/bin/activate
-pip install -R requirements.txt
+pip install -r requirements.txt
 ```
 
 ### Running

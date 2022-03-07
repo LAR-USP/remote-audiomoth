@@ -34,7 +34,7 @@ class AudioRecorder(object):
         wf.writeframes(b''.join(frames))
         wf.close()
 
-    def record(self, CHUNK = 1024, CHANNELS=2, FORMAT=pyaudio.paInt16):
+    def record(self, CHUNK = 1024, CHANNELS=1, FORMAT=pyaudio.paInt16):
         p = pyaudio.PyAudio()
 
         stream = p.open(format=FORMAT,
@@ -73,5 +73,5 @@ class AudioRecorder(object):
             time.sleep(self.ri)
 
 if __name__ == '__main__':
-    AR = AudioRecorder('localhost', 19123, 44100, 1, 5)
+    AR = AudioRecorder('localhost', 19123, 48000, 1, 30)
     AR.activate()

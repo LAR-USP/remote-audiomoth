@@ -1,4 +1,5 @@
 import socket
+import time
 
 class AudioReceiver(object):
     def __init__(self, host, port):
@@ -10,7 +11,7 @@ class AudioReceiver(object):
         self.s.listen(1)
 
     def save(self, conn):
-        audio_file = '../data/audiomoth-{}.wav'.format(self.audio_counter)
+        audio_file = '../data/audiomoth-{}-{}.wav'.format(time.time(), self.audio_counter)
         with open(audio_file,'wb') as f:
             try:
                 while True:
@@ -30,5 +31,5 @@ class AudioReceiver(object):
             self.save(conn)
 
 if __name__ == '__main__':
-    AR = AudioReceiver('localhost', 19123)
+    AR = AudioReceiver('10.3.141.110', 19123)
     AR.listen()
